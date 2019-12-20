@@ -10,29 +10,32 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('123','Hellocontroller@gettnigvale');
-Route::post('/submit','Hellocontroller@index');
+
+
 
 Route::get('/', function () {
-    return view('contacts');
+    return view('Front');
+});
+Route::get('/Front', function () {
+    return view('Front');
+});
+Route::resource('laravel','project');
+Route::get('/About', function () {
+    return view('About');
+});
+Route::get('/index', function () {
+    return view('index');
 });
 
-Route::get('/welcome', function () {
-    return view('welcome');
+Route::get('/Contact', function () {
+    return view('Contact');
 });
-
-Route::get('/registration', function () {
-    return view('registration');
+Route::get('/login_Requisioner', function () {
+    return view('login_Requisioner');
 });
-Route::get('/about', function () {
-    return view('about');
+Route::get('/login_DepartmentHead', function () {
+    return view('login_DepartmentHead');
 });
-Route::get('/contacts', function () {
-    return view('contacts');
+Route::get('/login_sectionhead', function () {
+    return view('login_sectionhead');
 });
-Route::get('data/{id}',function($id) {
-   echo 'ID: '.$id;
-});
-
-
-?>
